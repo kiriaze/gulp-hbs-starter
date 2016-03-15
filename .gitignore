@@ -37,11 +37,9 @@ node_modules
 error_log
 
 # CK's ignorish
-node_modules*
 npm-debug*
-.DS_STORE
 bower_components/
-.publish
+src/assets/vendor/
 dist
-vendor/
-# src/assets/vendor/
+# gh-pages
+.publish
