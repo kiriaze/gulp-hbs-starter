@@ -1,0 +1,135 @@
+
+.hero-slider {
+
+	.inner-container {
+		@include float-left;
+		margin: 0 -10px 0 10px;
+	}
+
+	ul.hero-slides {
+
+		@include relative;
+		margin-right: $colWidth*2;
+
+		li {
+
+			@include float-left;
+
+			&:not(:first-child){
+
+				@include absolute;
+				@include float-none;
+				width: 100%;
+				height: 100%;
+			}
+
+			figcaption {
+
+				@include absolute;
+				@include vert-align-col;
+
+				width: 40%;
+				margin-left: $colWidth*2-10;
+
+				.vert-centered {
+
+					@include inline-block;
+					vertical-align: middle;
+					white-space: normal;
+
+					h2 {
+						font-size: 85px;
+						line-height: 72px;
+						letter-spacing: 0;
+						color: $textLight;
+						text-transform: uppercase;
+						margin-bottom: 36px;
+					}
+
+					h4 {
+						font-size: 15px;
+						line-height: 23px;
+						color: $textWhite;
+						padding-right: $colWidth;
+					}
+				}
+			}
+		}
+	}
+
+	ul.hero-cats { 
+
+		@include float-left;
+		margin: -62px $colWidth 0px;
+
+		li {
+
+			@include float-left;
+
+			&:last-child {
+				margin-right: 0px;
+			}
+
+			figcaption {
+				
+				@include absolute;
+				@include vert-align-col;
+				width: 100%;
+				text-align: center;
+
+				h3 {
+					@include inline-block;
+					color: $textWhite;
+					font-size: 25px;
+					line-height: 23px;
+					letter-spacing: 0.03em;
+					vertical-align: middle;
+					text-transform: uppercase;
+				}
+			}
+
+			.cta {
+				@include absolute;
+				left: auto;
+				top: auto;
+				right: 0px;
+				bottom: 0px;
+				width: 56px;
+				height: 50px;
+			}
+		}
+	}
+
+	.hero-controls {
+
+		@include absolute;
+		left: auto;
+		right: 0px;
+
+		button {
+
+			&.prev {
+
+			}
+
+			&.next {
+
+			}
+		}
+
+		ul.hero-nav-items {
+			
+			li.hero-nav-item {
+
+				a {
+
+				}
+
+				i {
+
+				}
+			} 
+		}
+	}
+
+}

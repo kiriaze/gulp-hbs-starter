@@ -1,0 +1,32 @@
+
+.explore-tab {
+
+	@include absolute;
+	top: auto;
+	left: auto;
+	right: 20px;
+	bottom: 20px;
+	background: $bgDark;
+	color: $textLight;
+	text-transform: uppercase;
+	text-align: right;
+	padding: 25px 18px;
+
+	.arrow {
+
+	}
+
+	.suptitle {
+		@include merriweather-bold;
+		font-size: 9px;
+		line-height: 19px;
+		letter-spacing: 0.06em;
+		color: $textLightGrey;
+	}
+
+	.title {
+		@include proxima-bold;
+		font-size: 13px;
+		line-height: 13px;
+	}
+}

@@ -1,0 +1,84 @@
+
+#main-footer {
+
+	color: $textWhite;
+	background: #000000;	
+
+	.overlay {
+
+		@include absolute;
+		right: 0px;
+		margin: 0 auto;
+		z-index: 100;
+		text-align: center;
+
+		ul.footer-nav {
+
+			@include relative;
+			width: 100%;
+			height: inherit;
+			line-height: inherit;
+			text-align: center;
+			padding: $colWidth 0 0 0;
+
+			li {
+
+				@include inline-block;
+				@include proxima-extrabold();
+				font-size: 13px;
+				text-transform: uppercase;
+				padding-right: 30px;
+				letter-spacing: 0.03em;
+				vertical-align: top;
+
+				&:last-child {
+					padding-right: 0px;
+				}
+
+				&.logo {
+
+					width: 250px;
+					text-align: center;
+
+					figcaption {
+						font-size: 11px;
+						line-height: 30px;
+						color: rgba(255,255,255,0.7);
+					}
+				}
+			}
+		}
+
+		.social-icons-wrapper {
+
+		}
+
+		.footer-quote-wrapper {
+			
+			@include inline-block;
+			text-align: center;
+			margin-top: 300px;
+
+			.quote-mark {
+
+			}
+
+			.footer-quote {
+
+				@include merriweather-italic;
+				font-size: 15px;
+				line-height: 22px;
+				letter-spacing: 0.03em;
+				width: 250px;
+				text-transform: none;
+
+				cite {
+					@include proxima-black;
+					font-size: 12px;
+					line-height: 22px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

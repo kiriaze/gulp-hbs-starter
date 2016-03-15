@@ -1,0 +1,58 @@
+
+/* merriweather */
+
+@mixin merriweather() {
+	font-family: "merriweather",sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin merriweather-italic() {
+	font-family: "merriweather",sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin merriweather-bold() {
+	font-family: "merriweather",sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* proxima nova */
+
+@mixin proxima() {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin proxima-medium() {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@mixin proxima-semibold() {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+@mixin proxima-bold() {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin proxima-extrabold() {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}
+
+@mixin proxima-black() {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}

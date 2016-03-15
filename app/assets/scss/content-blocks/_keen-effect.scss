@@ -1,0 +1,37 @@
+
+.keen-effect {
+
+	>.inner-container {
+		@include relative;
+		margin: 0 #{$colGutter/2};
+		padding: 40px #{$colWidth*2-$colGutter/2} 105px;
+		background: #f9ce37 url('../img/content-blocks/keen-effect-bg.jpg') center center no-repeat;
+		background-size: cover;
+	}
+
+	.center {
+
+		@include relative;
+		text-align: center;
+		width: 100%;
+
+		img {
+
+		}
+
+		h6 {
+			@include proxima-extrabold;
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+
+		h4 {
+			width: 450px;
+			margin: 0 auto;
+			font-size: 13px;
+			line-height: 24px;
+			margin-top: 33px;
+		}
+	}
+}

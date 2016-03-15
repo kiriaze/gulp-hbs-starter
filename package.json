@@ -1,11 +1,39 @@
 {
-	"connect": "^3.4.0",
-	"gulp": "^3.9.0",
-	"gulp-cssnano": "^2.1.0",
-	"gulp-minify": "0.0.5",
-	"gulp-minify-css": "^1.2.3",
-	"gulp-rename": "^1.2.2",
-	"gulp-sass": "^2.1.1",
-	"gulp-watch": "^4.3.5",
-	"serve-static": "^1.10.0"
+  "name": "fuerst-delivery",
+  "version": "1.0.0",
+  "description": "Sample delivery for Keen/Chrome prototype builds.",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "connect": "*",
+    "gulp": "*",
+    "gulp-browserify": "*",
+    "gulp-cache": "*",
+    "gulp-clean": "*",
+    "gulp-concat": "*",
+    "gulp-cssnano": "*",
+    "gulp-eslint": "*",
+    "gulp-filesize": "*",
+    "gulp-hb": "*",
+    "gulp-imagemin": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-uglifycss": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "node-underscorify": "*",
+    "watchify": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "\"echo \\\"Boop\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dmrobbins@bitbucket.org/fuerstgroup/basic-fuerst-delivery.git"
+  },
+  "author": "BASIC Agency",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/fuerstgroup/basic-fuerst-delivery#readme"
 }
