@@ -1,5 +1,5 @@
 {
-  "name": "basic-bitch",
+  "name": "basic-starter",
   "version": "1.0.0",
   "description": "Basic prototype build kit. Just run `npm install` and you're done homie.",
   "main": "gulpfile.js",
