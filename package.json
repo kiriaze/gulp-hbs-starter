@@ -1,39 +1,88 @@
 {
-  "name": "fuerst-delivery",
+  "name": "basic-bitch",
   "version": "1.0.0",
-  "description": "Sample delivery for Keen/Chrome prototype builds.",
-  "main": "Gulpfile.js",
+  "description": "Basic prototype build kit. Just run `npm install` and you're done homie.",
+  "main": "gulpfile.js",
+  "author": "BASIC Agency",
+  "license": "ISC",
   "dependencies": {
-    "connect": "*",
-    "gulp": "*",
-    "gulp-browserify": "*",
-    "gulp-cache": "*",
-    "gulp-clean": "*",
-    "gulp-concat": "*",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-bower": "0.0.10",
+
+    "gulp-changed": "^1.2.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-cache": "^0.2.8",
+    "gulp-concat": "^2.4.3",
     "gulp-cssnano": "*",
+    "gulp-csso": "^1.0.0",
     "gulp-eslint": "*",
     "gulp-filesize": "*",
+
+    "gulp-filter": "^3.0.1",
+    "gulp-flatten": "^0.2.0",
+
+    "gulp-gh-pages": "0.5.2",
+
+    "gulp-gzip": "^1.1.0",
+
     "gulp-hb": "*",
-    "gulp-imagemin": "*",
+
+    "gulp-htmlmin": "^1.1.3",
+
+    "gulp-if": "^1.2.5",
+
+    "gulp-imagemin": "^2.2.1",
+
+    "gulp-jshint": "^1.10.0",
+
+    "gulp-load-plugins": "^1.0.0-rc.1",
+
+    "gulp-minify-css": "^1.2.0",
+
+    "gulp-notify": "^2.2.0",
+
+    "gulp-order": "^1.1.1",
+
     "gulp-plumber": "*",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "*",
-    "gulp-uglify": "*",
-    "gulp-uglifycss": "*",
-    "gulp-util": "*",
-    "gulp-watch": "*",
+    "gulp-rsync": "0.0.5",
+    "gulp-sass": "^2.2.0",
+    "gulp-shell": "^0.4.1",
+    "gulp-sitemap": "^2.1.1",
+    "gulp-size": "^1.2.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-tar": "^1.4.0",
+    "gulp-uncss": "1.0.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "~3.0.2",
+
+
+    "browser-sync": "^2.7.12",
+    "browserify": "^11.0.1",
+    "browserify-shim": "^3.8.12",
+    "event-stream": "^3.3.1",
+    "glob": "^5.0.14",
+    "del": "^1.2.0",
+
+    "main-bower-files": "^2.9.0",
+    "path": "^0.11.14",
+    "run-sequence": "^1.1.2",
+    "jshint-stylish": "~1.0.0",
+    "psi": "^0.1.2",
+    "request": "^2.55.0",
+    "require-dir": "^0.3.0",
+
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+
     "node-underscorify": "*",
     "watchify": "*"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "\"echo \\\"Boop\\\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://dmrobbins@bitbucket.org/fuerstgroup/basic-fuerst-delivery.git"
-  },
-  "author": "BASIC Agency",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/fuerstgroup/basic-fuerst-delivery#readme"
+    "test": "\"echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npm install --g gulp && npm install -g bower",
+    "postinstall": "bower install && gulp"
+  }
 }
