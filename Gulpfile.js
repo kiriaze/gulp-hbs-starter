@@ -1,19 +1,19 @@
 
-var gulp = require('gulp');
-var cache = require('gulp-cache');
-var clean = require('gulp-clean');
-var concat = require('gulp-concat');
-var filesize = require('gulp-filesize');
+var gulp       = require('gulp');
+var cache      = require('gulp-cache');
+var clean      = require('gulp-clean');
+var concat     = require('gulp-concat');
+var filesize   = require('gulp-filesize');
 var handlebars = require('gulp-hb');
-var plumber = require('gulp-plumber');
-var imagemin = require('gulp-imagemin');
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
-var uglifycss = require('gulp-uglifycss');
-var gutil = require('gulp-util');
+var plumber    = require('gulp-plumber');
+var imagemin   = require('gulp-imagemin');
+var sass       = require('gulp-sass');
+var uglify     = require('gulp-uglify');
+var uglifycss  = require('gulp-uglifycss');
+var gutil      = require('gulp-util');
 var browserify = require('gulp-browserify');
-var watchify = require('watchify');
-var rename = require('gulp-rename');
+var watchify   = require('watchify');
+var rename     = require('gulp-rename');
 
 //
 
