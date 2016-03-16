@@ -1,0 +1,31 @@
+{{#each sampleData}}
+	<section>
+		<ul>
+			<li>
+			{{#if fullName}}
+				{{{fullName}}}
+			{{/if}}
+			</li>
+			<li>
+			{{#if bio}}
+				{{{bio}}}
+			{{/if}}
+			</li>
+			<li>
+			{{#if twitterUsername}}
+				{{{twitterUsername}}}
+			{{/if}}
+			</li>
+			<li>
+			{{#if githubUsername}}
+				{{{githubUsername}}}
+			{{/if}}
+			</li>
+			<li>
+			{{#if website}}
+				{{{website}}}
+			{{/if}}
+			</li>
+		</ul>
+	</section>
+{{/each}}

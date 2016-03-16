@@ -1,23 +1,29 @@
-{{#if people}}
-yo
-{{/if}}
+<section>
 
-{{fullName}}
+	<h2 class="styleguide-module__title">{{{typographyData.name}}}</h2>
 
-{{#each people}}
-foo
-	<div class="section">
-		{{#if comment}}
-			<div class="comment">{{{comment}}}</div>
-		{{/if}}
-		{{#if result}}
-			<div class="result">{{{result}}}</div>
-		{{/if}}
-		{{#if markup}}
-			<div class="markup">{{{markup}}}</div>
-		{{/if}}
-		{{#if styles}}
-			<div class="styles">{{{styles}}}</div>
-		{{/if}}
-	</div>
-{{/each}}
+	{{#if typographyData.items.fonts}}
+		<div class="titles">
+			{{#each typographyData.items.fonts}}
+				<h{{{heading}}} class="{{{className}}}" contenteditable="true">{{{fontName}}}</h{{{heading}}}>
+				<span class="styleguide-module__title--light">{{{fontName}}} - {{{fontSize}}}</span>
+			{{/each}}
+		</div>
+	{{/if}}
+
+	{{#if typographyData.items.paragraphsName}}
+		{{{typographyData.items.paragraphsName}}}
+	{{/if}}
+
+	<br>
+
+	<h5 class="styleguide-module__title--small">{{{typographyData.items.paragraphsName}}}</h5>
+
+	{{#if typographyData.items.paragraphs}}
+		{{#each typographyData.items.paragraphs}}
+			<span class="styleguide-module__title--light">{{{fontName}}} - {{{fontSize}}}</span>
+			<p {{#if typographyData.items.paragraphs.className}}class="{{{className}}}"{{/if}} contenteditable="true">{{{text}}}</p>
+		{{/each}}
+	{{/if}}
+
+</section>

@@ -1,5 +1,5 @@
-{
-  "people" : [{
+[
+  {
     "fullName": "James Burns",
     "bio": "Hey i'm James and i'm a front-end dev currently working in Manchester.",
     "twitterUsername": "@jburns",
@@ -19,5 +19,5 @@
     "twitterUsername": "@arimmer22",
     "githubUsername": "alex_rimmer",
     "website": "www.arimmer.co.uk/portfolio"
-  }]
-}
+  }
+]
