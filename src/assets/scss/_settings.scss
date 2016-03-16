@@ -1,14 +1,10 @@
-//
-//
-// Typography - core/_typography.scss
-//
-//
-
 // Site Global Dimensions - Issue: ems are messing up if parent element is set to a font-size, cascades to child container and affects width. Weird.
 $tiny:							480px; // 30em
 $small:							768px; // 45em
 $medium:						960px; // 60em
 $large:							1280px; // 80em
+$xlarge:						1440px; // 90em
+$xxlarge:						1680px; // 105em
 
 // Base Typography Values
 $rem-base:						16px !default;
@@ -45,10 +41,23 @@ $list-line-height:				1.6 !default;
 $blockquotes-font-size:			21 !default;
 
 // fonts - core/_fonts.scss
-$body-font:						'Open Sans', helvetica, sans-serif; // bourbon font stacks
-$header-font:					'Raleway', $body-font; // theme specific
+$body-font:						Open Sans, helvetica, sans-serif; // bourbon font stacks
+$header-font:					Open Sans, $body-font; // theme specific
 
+// alt
+$sans:							$body-font;
+$slab:							$header-font;
 
+// Spacing Vars - _spacing.scss
+// Spacing Scale - based on a ratio of 1:2
+$spacing-none:					0;
+$spacing-xsmall:				.25rem;
+$spacing-small:					.5rem;
+$spacing-medium:				1rem;
+$spacing-large:					2rem;
+$spacing-xlarge:				4rem;
+$spacing-xxlarge:				8rem;
+$spacing-xxxlarge:				16rem;
 
 //
 //
@@ -123,9 +132,6 @@ $dark:							#434d5a;
 $duration:						.35s; // was .15, upped for hero transition - or change via js
 $delay:							.2s;
 $transition:					all $duration cubic-bezier(0.2, .4, .1, 1); // thumbnail animations
-$function:						ease;
-$fill:							both;
-$visibility:					visible;
 
 // Animation Class Variables Setup
 $fadeIn:						true;

@@ -44,6 +44,14 @@
     visibility: hidden;
 }
 
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -61,7 +69,7 @@
 
 
 /* Print Styles
------------------------------------------ */ 
+----------------------------------------- */
 @media print {
     * {
         background: transparent !important;

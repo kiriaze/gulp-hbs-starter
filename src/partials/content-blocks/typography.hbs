@@ -1,0 +1,23 @@
+{{#if people}}
+yo
+{{/if}}
+
+{{fullName}}
+
+{{#each people}}
+foo
+	<div class="section">
+		{{#if comment}}
+			<div class="comment">{{{comment}}}</div>
+		{{/if}}
+		{{#if result}}
+			<div class="result">{{{result}}}</div>
+		{{/if}}
+		{{#if markup}}
+			<div class="markup">{{{markup}}}</div>
+		{{/if}}
+		{{#if styles}}
+			<div class="styles">{{{styles}}}</div>
+		{{/if}}
+	</div>
+{{/each}}

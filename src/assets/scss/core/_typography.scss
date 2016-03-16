@@ -13,16 +13,31 @@ body {
 
 html {
 	font-family: sans-serif;
-    text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+
+	// font-size: 62.5%;
 }
 
 body {
 	line-height: 1;
 	font-family: $body-font;
+
+	// font-size: 1rem;
+	// line-height: 1.5rem;
+
+	// /*
+	// $fontbase = 16
+	// $line-height-base = 26
+	// */
+	// font-size: 1.6rem;
+	// line-height: 1.625; /* $line-height-base ÷ $fontbase */
+
+
 	color: $dark-grey;
 	-webkit-font-smooth: always;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
 	background: #fff;
 
@@ -149,23 +164,6 @@ code {
 	background-color: lighten($black, 90);
 }
 
-// added by flexible content
-[class*='text-align-'] {
-    text-align: center;
-}
-
-@include breakpoint($medium) {
-    .text-align-left {
-        text-align: left !important;
-    }
-    .text-align-right {
-        text-align: right !important;
-    }
-    .text-align-center {
-        text-align: center !important;
-    }
-}
-
 
 /*=====================================================
 
@@ -210,7 +208,8 @@ $map: (
 );
 
 @each $header, $size in ($map) {
-	#{$header} {
+	#{$header},
+	.#{$header} {
 		@include font-size($size);
 		@include breakpoint($medium) {
 			@include font-size($size + $size/6);
@@ -337,5 +336,72 @@ q {
 		font-size: initial;
 		padding-top: 2%;
 		display: block;
+	}
+}
+
+
+
+
+/*=====================================================
+
+Emphasis and Styling
+
+======================================================*/
+
+$regular: 400;
+$bold: 600;
+
+.regular,
+.normal {
+	font-weight: $regular;
+}
+.bold {
+	font-weight: $bold;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.italic {
+	font-style: italic;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.decoration-none {
+	text-decoration: none;
+}
+.decoration-underline {
+	text-decoration: underline;
+}
+.decoration-line-through {
+	text-decoration: line-through;
+}
+
+/*=====================================================
+
+Typeface Classes
+
+======================================================*/
+
+.slab {
+	font-family: $slab;
+	line-height: 1.1;
+	// Needed b/c chrome still needs prefix
+	-webkit-font-feature-settings: "liga", "kern";
+	font-feature-settings:         "liga", "kern";
+
+	&.bold {
+		font-family: $slab;
+		font-weight: $regular;
+	}
+
+	&.italic {
+		font-family: $slab;
 	}
 }

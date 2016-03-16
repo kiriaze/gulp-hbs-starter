@@ -1,16 +1,32 @@
 // file for overriding type styles easily
 
 @for $i from 1 through 6 {
-    h#{$i} {
+	h#{$i} {
 		font-weight: 300;
-    }
+	}
+}
+
+// added by flexible content
+[class*='text-align-'] {
+	text-align: center;
+}
+
+@include breakpoint($medium) {
+	.text-align-left {
+		text-align: left !important;
+	}
+	.text-align-right {
+		text-align: right !important;
+	}
+	.text-align-center {
+		text-align: center !important;
+	}
 }
 
 p {
 	&.lead {
 		display: block;
-		font-size: 1.3em;
-		font-weight: 400;
+		font-size: 1.3rem;
 		line-height: 150%;
 		margin: 0 0 3rem;
 	}
@@ -24,7 +40,6 @@ p {
 		}
 	}
 }
-
 
 hr {
 	display: inline-block;
