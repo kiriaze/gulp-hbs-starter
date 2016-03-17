@@ -61,8 +61,28 @@
 			easing: 'easeInOutCubic'
 		});
 
-		// Target your .container, .wrapper, .post, etc.
-		SHORTNAME.elems.body.fitVids();
+		// debugging validator, prevents form submit
+		$.validator.setDefaults({
+			debug: true,
+			success: "valid"
+		});
+		// Form Validation
+		if ( $().validate ) {
+			$('#foobar').validate({
+				rules: {
+			        password: {
+			            required: true,
+			            minlength: 5
+			        },
+			        password2: {
+			            required: true,
+			            minlength: 5,
+			            equalTo: "#password"
+			        }
+			    },
+			});
+			$('#foobar').removeAttr('novalidate');
+		}
 
 	};
 

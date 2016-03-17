@@ -16,14 +16,8 @@ gulp.task('js', function(){
     files.push(config.scripts.src);
 
 	return gulp.src(files)
-		// .pipe(plugins.browserify({
-		// 	insertGlobals : true,
-		// 	debug : !gulp.env.production
-		// 	// debug : config.debugMode
-		// }))
 		.pipe(plugins.sourcemaps.init())
 			.pipe(plugins.order(config.scripts.order))
-			// .pipe(plugins.uglify())
 			.pipe(plugins.uglify())
 				.on('error', plugins.notify.onError(function (error) {
 					return 'An error occurred while compiling js.\nLook in the console for details.\n' + error;

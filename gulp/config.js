@@ -105,8 +105,14 @@ module.exports = {
 	},
 
 	'scripts': {
-		'src' : 'src/assets/js',
-		'dest': 'dist/assets/js'
+		'src' : 'src/assets/js/**/*.js',
+		'dest': 'dist/assets/js',
+		'order': [
+			'**/**/modernizr.js',
+			'**/**/jquery.js',
+			'**/**/jquery.validate.js',
+			'**/**/*.js'
+		]
 	}
 
 };
