@@ -30,3 +30,16 @@ You're now a baller.
 - [ ] Figure out why vendor dir shows up in dist
 - [ ] Integrate watchify/webpack/browserify - despite not utilizing it now..since this will be the starter kit
 - [ ] Test clean `npm install` and run some tests for js/css/hbs
+
+project
+  index.html
+  components/
+  pages/
+    about/
+      about.json
+    shop/
+    contact/
+
+partials for sg like base and wrapper (e.g. head,foot,etc) in sg, everything else in modules, no need for templates/pages since thats referenced in root of project
+
+test to see if referencing media from page specfic builds works, e.g. about page slider requiring different images than the default slider module - utilizing json in a sense like front matter
