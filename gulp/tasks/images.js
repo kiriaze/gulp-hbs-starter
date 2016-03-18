@@ -8,12 +8,12 @@ var config       = require('../config'),
 
 // Image tasks
 gulp.task('images', function() {
-	return gulp.src(config.images.src)
-		.pipe(plugins.changed(config.images.dest)) // Ignore unchanged files
+	return gulp.src(config.srcPaths.images)
+		.pipe(plugins.changed(config.destPaths.images)) // Ignore unchanged files
 		.pipe(plugins.imagemin({
 			progressive: true,
       		interlaced: true
 		})) // Optimize
-		.pipe(gulp.dest(config.images.dest))
+		.pipe(gulp.dest(config.destPaths.images))
 		.pipe(browserSync.reload({stream:true}))
 });

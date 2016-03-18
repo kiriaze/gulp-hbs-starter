@@ -4,9 +4,9 @@ var config  = require('../config'),
 
 gulp.task('deploy', ['prod'], function() {
 
-	return gulp.src([config.dist.root + '/**/*'])
+	return gulp.src([config.destPaths.root + '/**/*'])
 		.pipe(rsync({
-			root: config.dist.root,
+			root: config.destPaths.root,
 			hostname: config.hostname,
 			username: config.username,
 			password: config.password,

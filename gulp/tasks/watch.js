@@ -10,18 +10,18 @@ var config        = require('../config'),
 gulp.task('watch', function() {
 
 	// Watch Sass files
-	gulp.watch(config.styles.src + '/**/*.scss', ['css']);
+	gulp.watch(config.srcPaths.styles + '/**/*.scss', ['css']);
 
 	// Watch JS files
-	gulp.watch(config.scripts.src, ['js']);
+	gulp.watch(config.srcPaths.scripts, ['js']);
 
 	// Watch image files
-	gulp.watch(config.images.src, ['images'], reload);
+	gulp.watch(config.srcPaths.images, ['images'], reload);
 
 	// markup build
 	gulp.watch([
-		config.src.root + '/**/*.html',
-		config.src.root + '/**/*.hbs'
+		config.srcPaths.root + '/**/*.html',
+		config.srcPaths.root + '/**/*.hbs'
 	], ['hb-rebuild'], reload);
 
 });

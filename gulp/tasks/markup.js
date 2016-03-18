@@ -8,27 +8,23 @@ var config 		  = require('../config'),
 
 gulp.task('markup', function() {
 
-	return gulp.src(config.watchPaths.html)
-		.pipe(plugins.plumber({
-			errorHandler: function (err) {
-				console.log(err);
-				this.emit('end');
-			}
-		}))
+	return gulp.src(config.srcPaths.html)
+		// exclude vendor plugin html files from output
+		.pipe(plugins.filter(['*', !config.srcPaths.root + '/assets/vendor/**/*.html']))
 		.pipe(plugins.hb({
-			partials: config.watchPaths.partials,
-			helpers: config.watchPaths.helpers,
-			data: config.watchPaths.data
+			partials: config.srcPaths.partials,
+			helpers: config.srcPaths.helpers,
+			data: config.srcPaths.data
 		}))
 		.pipe(gulp.dest(config.destPaths.root));
 });
 
-gulp.task('hb-rebuild', ['markup'], function () {
+gulp.task('hb-rebuild', ['markup'], function() {
 	browserSync.reload();
 });
 
 gulp.task('html', function() {
-    return gulp.src(config.dist.root + '/**/*.html')
+    return gulp.src(config.destPaths.root + '/**/*.html')
         .pipe(plugins.htmlmin({
         	collapseWhitespace: true,
             removeComments: true,
@@ -38,5 +34,5 @@ gulp.task('html', function() {
             minifyJS: true,
             minifyCSS: true
         }))
-        .pipe(gulp.dest(config.dist.root))
+        .pipe(gulp.dest(config.destPaths.root))
 });

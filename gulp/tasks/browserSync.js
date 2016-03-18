@@ -8,7 +8,7 @@ var config      = require('../config'),
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
-			baseDir: config.dist.root
+			baseDir: config.destPaths.root
 		},
 		port: config.serverport
 		// Can't have both server and proxy, pick one.

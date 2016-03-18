@@ -39,7 +39,7 @@ error_log
 # CK's ignorish
 npm-debug*
 bower_components/
-src/assets/vendor/
+vendor/
 dist
 # gh-pages
 .publish

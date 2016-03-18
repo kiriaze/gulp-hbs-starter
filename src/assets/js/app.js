@@ -78,16 +78,7 @@
 			            required: true,
 			            minlength: 5,
 			            equalTo: "#password"
-			        },
-			        email: {
-			            required: true,
-			            minlength: 5
-			        },
-			        email2: {
-			            required: true,
-			            minlength: 5,
-			            equalTo: "#email"
-			        },
+			        }
 			    },
 			});
 			$('#foobar').removeAttr('novalidate');

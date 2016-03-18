@@ -7,7 +7,7 @@ var config         = require('../config'),
 	browserSync    = require('browser-sync');
 
 gulp.task('video', function() {
-	return gulp.src(config.video.src)
-		.pipe(gulp.dest(config.video.dest))
+	return gulp.src(config.srcPaths.video)
+		.pipe(gulp.dest(config.destPaths.video))
 		.pipe(browserSync.reload({stream:true}))
 });

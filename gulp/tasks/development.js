@@ -15,7 +15,7 @@ gulp.task('default', function() {
 		'fonts',
 		'browser-sync',
 		'watch',
-		// 'sitemap',
+		'sitemap',
 		'info'
 	);
 });

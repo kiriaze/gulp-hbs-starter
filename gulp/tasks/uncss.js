@@ -12,12 +12,12 @@ var config      = require('../config'),
 // var uncssIgnoreClass = config.uncss.ignore;
 
 // gulp.task('uncss', function() {
-// 	return gulp.src(config.dist.root + '/assets/css/*.css')
+// 	return gulp.src(config.destPaths.root + '/assets/css/*.css')
 // 		.pipe(uncss({
-// 			html: [config.dist.root + '/**/*.html'],
+// 			html: [config.destPaths.root + '/**/*.html'],
 // 			ignore: uncssIgnoreClass,
 // 			ignoreSheets: [/fonts.googleapis/]
 // 		}))
 // 		.pipe(csso()) // re compress after uncss
-// 		.pipe( gulp.dest(config.src.root + '/partials') ) // placed in _includes dir for @include in head.html
+// 		.pipe( gulp.dest(config.srcPaths.root + '/partials') ) // placed in _includes dir for @include in head.html
 // });
