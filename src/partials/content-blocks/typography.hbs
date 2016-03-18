@@ -1,29 +1,33 @@
 <section>
 
-	<h2 class="styleguide-module__title">{{{typographyData.name}}}</h2>
+	<div class="container">
+		<div class="row">
 
-	{{#if typographyData.items.fonts}}
-		<div class="titles">
-			{{#each typographyData.items.fonts}}
-				<h{{{heading}}} class="{{{className}}}" contenteditable="true">{{{fontName}}}</h{{{heading}}}>
-				<span class="styleguide-module__title--light">{{{fontName}}} - {{{fontSize}}}</span>
-			{{/each}}
+			<h2 class="styleguide-module__title">{{{typographyData.name}}}</h2>
+
+			{{#if typographyData.items.fonts}}
+				<div class="titles">
+					{{#each typographyData.items.fonts}}
+						<h{{{heading}}} class="{{{className}}}" contenteditable="true">{{{fontName}}}</h{{{heading}}}>
+						<span class="styleguide-module__title--light">{{{fontName}}} - {{{fontSize}}}</span>
+					{{/each}}
+				</div>
+			{{/if}}
+
+			<br>
+
+			{{#if typographyData.items.paragraphsName}}
+				<h5 class="styleguide-module__title--small">{{{typographyData.items.paragraphsName}}}</h5>
+			{{/if}}
+
+			{{#if typographyData.items.paragraphs}}
+				{{#each typographyData.items.paragraphs}}
+					<span class="styleguide-module__title--light">{{{fontName}}} - {{{fontSize}}}</span>
+					<p {{#if typographyData.items.paragraphs.className}}class="{{{className}}}"{{/if}} contenteditable="true">{{{text}}}</p>
+				{{/each}}
+			{{/if}}
+
 		</div>
-	{{/if}}
-
-	{{#if typographyData.items.paragraphsName}}
-		{{{typographyData.items.paragraphsName}}}
-	{{/if}}
-
-	<br>
-
-	<h5 class="styleguide-module__title--small">{{{typographyData.items.paragraphsName}}}</h5>
-
-	{{#if typographyData.items.paragraphs}}
-		{{#each typographyData.items.paragraphs}}
-			<span class="styleguide-module__title--light">{{{fontName}}} - {{{fontSize}}}</span>
-			<p {{#if typographyData.items.paragraphs.className}}class="{{{className}}}"{{/if}} contenteditable="true">{{{text}}}</p>
-		{{/each}}
-	{{/if}}
+	</div>
 
 </section>

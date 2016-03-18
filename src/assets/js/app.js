@@ -81,16 +81,16 @@
 
 			SHORTNAME.elems.exampleForm.validate({
 				rules: {
-			        password: {
-			            required: true,
-			            minlength: 5
-			        },
-			        password2: {
-			            required: true,
-			            minlength: 5,
-			            equalTo: "#password"
-			        }
-			    },
+					password: {
+						required: true,
+						minlength: 5
+					},
+					password2: {
+						required: true,
+						minlength: 5,
+						equalTo: "#password"
+					}
+				},
 			});
 
 			SHORTNAME.elems.exampleForm.removeAttr('novalidate');
