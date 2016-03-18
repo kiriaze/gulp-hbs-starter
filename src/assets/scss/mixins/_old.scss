@@ -63,112 +63,24 @@
 	display: inline-block !important;
 }
 
-// visibility
-@mixin hidden {
-	visibility: hidden !important;
-	opacity: 0;
-}
 
-@mixin opacity-0 {
-	opacity: 0;
-}
-
-@mixin display-none {
-	display: none !important;
-}
-
-@mixin disabled {
-	cursor: default !important;
-}
-
-@mixin offscreen {
-	position: absolute !important;
-	top: -9999px !important;
-	left: -9999px !important;
-}
-
-.opacity-0 {
-	@include opacity-0;
-}
-
-.hidden,
-.invisible {
-	@include hidden;
-}
-
-.display-none {
-	@include display-none;
-}
-
-.coming-soon a,
-.disabled {
-	@include disabled;
-}
-
-.offscreen {
-	@include offscreen;
-}
-
-// float
-@mixin float-left {
-	@include relative;
-	float: left;
-}
-
-@mixin float-right {
-	@include relative;
-	float: right;
-}
-
-@mixin float-none {
-	@include relative;
-	float: none;
-}
-
-.float-left {
-	@include float-left;
-}
-
-.float-right {
-	@include float-right;
-}
-
-.float-none {
-	@include float-none;
-}
 
 // box model
-@mixin border-box {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+.border-box {
 	box-sizing: border-box;
 }
 
-@mixin content-box {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-}
-
-.border-box {
-	@include border-box;
-}
-
 .content-box {
-	@include content-box;
+	box-sizing: content-box;
 }
 
 // centering
 @mixin vertical-center {
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
 @mixin vertical-center-container {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 
@@ -183,14 +95,10 @@
 // horizontal
 @mixin horizontal-center {
 	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 
 @mixin horizontal-center-container {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 
@@ -206,14 +114,10 @@
 @mixin both-center {
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
 @mixin both-center-container {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 
@@ -223,83 +127,6 @@
 
 .both-center-container {
 	@include both-center-container;
-}
-
-// for abstractview - hides something that isn't alive yet
-@mixin uninitialized {
-	visibility: hidden;
-}
-
-// common buttons
-@mixin close-button {
-	@include absolute;
-}
-
-@mixin home-button {
-	@include absolute;
-}
-
-.uninitialized {
-	@include uninitialized;
-}
-
-.close-button {
-	@include close-button;
-}
-
-.home-button {
-	@include home-button;
-}
-
-// scroll vs no-scroll
-@mixin scroll {
-	overflow: auto;
-}
-
-@mixin scroll-x {
-	overflow-x: auto;
-	overflow-y: hidden;
-}
-
-@mixin scroll-y {
-	overflow-x: hidden;
-	overflow-y: auto;
-}
-
-@mixin no-scroll {
-	overflow: hidden;
-}
-
-.scroll {
-	@include scroll;
-}
-
-.scroll-x {
-	@include scroll-x;
-}
-
-.scroll-y {
-	@include scroll-y;
-}
-
-.no-scroll {
-	@include no-scroll;
-}
-
-@mixin overflow {
-	overflow: visible;
-}
-
-@mixin overflow-hidden {
-	overflow: hidden;
-}
-
-.overflow {
-	@include overflow;
-}
-
-.overflow-hidden {
-	@include overflow-hidden;
 }
 
 // container filling objects

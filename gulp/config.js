@@ -39,6 +39,13 @@ module.exports = {
 		fonts   : 'dist/assets/fonts'
 	},
 
+	'uncss': {
+		'ignore' : [
+			// '#search-input',
+			// '#results-container'
+		]
+	},
+
 	// Google pagespeed
 	'URL'       : 'http://domain.com',
 	'strategy'  : 'mobile',

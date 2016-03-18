@@ -8,9 +8,8 @@ var config 		  = require('../config'),
 
 gulp.task('markup', function() {
 
-	return gulp.src(config.srcPaths.html)
-		// exclude vendor plugin html files from output
-		.pipe(plugins.filter(['*', !config.srcPaths.root + '/assets/vendor/**/*.html']))
+	// exclude vendor plugin html files from output
+	return gulp.src([config.srcPaths.html, '!src/assets/vendor/**/*.html'])
 		.pipe(plugins.hb({
 			partials: config.srcPaths.partials,
 			helpers: config.srcPaths.helpers,

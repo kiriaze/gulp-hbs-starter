@@ -16,6 +16,7 @@
 		SHORTNAME.setElements();
 		SHORTNAME.colors();
 		SHORTNAME.basics();
+		SHORTNAME.forms();
 
 	};
 
@@ -26,6 +27,8 @@
 		SHORTNAME.elems.html          =	$('html');
 		SHORTNAME.elems.body          =	$('body');
 		SHORTNAME.elems.scrollToTop   =	$('a[data-scroll-to="top"]');
+
+		SHORTNAME.elems.exampleForm   = $('#example-form');
 
 	};
 
@@ -61,14 +64,22 @@
 			easing: 'easeInOutCubic'
 		});
 
+	};
+
+	SHORTNAME.forms = function() {
+
+		if ( ! SHORTNAME.elems.exampleForm.length ) return;
+
 		// debugging validator, prevents form submit
 		$.validator.setDefaults({
 			debug: true,
 			success: "valid"
 		});
+
 		// Form Validation
 		if ( $().validate ) {
-			$('#foobar').validate({
+
+			SHORTNAME.elems.exampleForm.validate({
 				rules: {
 			        password: {
 			            required: true,
@@ -81,7 +92,9 @@
 			        }
 			    },
 			});
-			$('#foobar').removeAttr('novalidate');
+
+			SHORTNAME.elems.exampleForm.removeAttr('novalidate');
+
 		}
 
 	};

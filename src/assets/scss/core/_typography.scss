@@ -10,8 +10,7 @@ html {
 	font-family: sans-serif;
 	text-size-adjust: 100%;
 	text-rendering: optimizeLegibility;
-
-	font-size: $base-font-size; // or 10px incase users have browser settings set to specific font size, not default
+	font-size: $base-font-size;
 }
 
 body {
@@ -24,12 +23,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
-	background: #fff;
-
+	text-size-adjust: none;
 	overflow-scrolling: touch;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-
-	text-size-adjust: none;
 }
 
 html,

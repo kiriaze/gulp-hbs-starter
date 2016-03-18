@@ -52,6 +52,22 @@
 	float: right;
 }
 
+.float-none {
+	float: none;
+}
+
+.is-block {
+	display: block;
+}
+
+.is-inline {
+	display: inline;
+}
+
+.is-disabled {
+	pointer-events: none;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -66,6 +82,52 @@
     *zoom: 1;
 }
 
+
+/* From BASIC (Davids)
+----------------------------------------- */
+
+// visibility
+.hidden,
+.invisible {
+	visibility: hidden !important;
+	opacity: 0;
+}
+
+.display-none {
+	display: none !important;
+}
+
+.coming-soon a,
+.disabled {
+	cursor: default !important;
+}
+
+// scroll vs no-scroll
+.scroll {
+	overflow: auto;
+}
+
+.scroll-x {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.scroll-y {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.overflow {
+	overflow: visible;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
 
 
 /* Print Styles
